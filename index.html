@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Me | Alexa Julia Bague</title>
+
+  <!-- Google Fonts: Montserrat (headings) + Open Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      max-width: 40rem;
+      margin: auto;
+      padding: 1rem;
+      background: #cdb8ee;
+      color: #2f1a52;
+      font-family: "Open Sans", Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      overflow-wrap: break-word;
+    }
+
+    header, section, footer {
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      background: #fff;
+      border-radius: 1rem;
+    }
+
+    header { text-align: center; }
+
+    h1, h2, h3 {
+      font-family: "Montserrat", Arial, Helvetica, sans-serif;
+      color: #4a2a82;
+      line-height: 1.2;
+    }
+    h1 { font-size: 2.25rem; margin: 0.5rem 0; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.125rem; }
+
+    /* Photo + bio side by side (Flexbox) */
+    .intro {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+      padding: 1rem 1.5rem;
+      background: #fff;
+      border: 0.25rem solid #4a2a82;
+      border-radius: 1rem;
+    }
+
+    .intro img {
+      flex: 0 0 10rem;
+      width: 10rem;
+      height: auto;
+      border: 0.2rem solid #4a2a82;
+      border-radius: 0.75rem;
+    }
+
+    .intro p { margin: 0; font-size: 1.125rem; }
+
+    /* Things I Love photo cards */
+    .loves-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .love-card {
+      margin: 0;
+      border: 0.125rem solid #cdb8ee;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background: #faf7ff;
+    }
+
+    .love-card img {
+      display: block;
+      width: 100%;
+      height: 11rem;
+      object-fit: cover;
+    }
+
+    .love-card figcaption {
+      padding: 0.5rem 0.75rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #4a2a82;
+      text-align: center;
+    }
+
+    /* Passion Projects */
+    article {
+      margin-bottom: 1rem;
+      padding: 0.75rem 1rem;
+      border: 0.125rem solid #cdb8ee;
+      border-radius: 0.75rem;
+    }
+
+    article:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .project-gallery img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border: 0.125rem solid #cdb8ee;
+      border-radius: 0.5rem;
+    }
+
+    /* Small screens: stack the photo above the bio */
+    @media (max-width: 600px) {
+      .intro {
+        flex-direction: column;
+        text-align: center;
+      }
+      .intro img {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 14rem;
+      }
+      .loves-grid,
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+      h1 { font-size: 1.875rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+  </header>
+
+  <div class="intro">
+    <img src="images/my_photo.jpeg" alt="Alexa smiling and holding a small cheesecake with a single pink candle" width="400" height="533">
+    <p><strong>Alexa Julia Bague</strong> | <em>In love with the creative and tech process</em></p>
+  </div>
+
+  <main>
+    <section>
+      <h2>Who I Am</h2>
+      <p>I’m a 4th year multimedia student in UP Open University interested in media, technology, and art direction and curation.</p>
+    </section>
+
+    <section>
+      <h2>Things I Love</h2>
+      <div class="loves-grid">
+        <figure class="love-card">
+          <img src="images/friends_and_family.jpeg" alt="Friends and family" loading="lazy">
+          <figcaption>My friends and family</figcaption>
+        </figure>
+        <figure class="love-card">
+          <img src="images/collecting_smiskis.jpeg" alt="Collection of Smiski figurines" loading="lazy">
+          <figcaption>Collecting Smiskis</figcaption>
+        </figure>
+        <figure class="love-card">
+          <img src="images/colorful_statement_pieces.jpeg" alt="Colorful accessories and bags" loading="lazy">
+          <figcaption>Colorful and statement pieces (accessories &amp; bags)</figcaption>
+        </figure>
+        <figure class="love-card">
+          <img src="images/cooking.jpeg" alt="Home-cooked meal" loading="lazy">
+          <figcaption>Cooking</figcaption>
+        </figure>
+        <figure class="love-card">
+          <img src="images/collecting_magazines.jpeg" alt="Collection of magazines" loading="lazy">
+          <figcaption>Reading magazines</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Passion Projects</h2>
+      <article>
+        <h3>Mental Health Advocacy</h3>
+        <p>I engage myself in communities teaching and advocating about Mental Health. I teach about self-care, community advocacy, and wellness to other people.</p>
+        <div class="project-gallery">
+          <img src="images/mental_health_1.jpeg" alt="Mental health advocacy community session" loading="lazy">
+          <img src="images/mental_health_2.jpeg" alt="Mental health advocacy workshop" loading="lazy">
+        </div>
+      </article>
+      <article>
+        <h3>Culture Writing</h3>
+        <p>I write contents online regarding spaces related to culture, lifestyle, art, and fashion.</p>
+        <div class="project-gallery">
+          <img src="images/culture_writing_1.png" alt="Culture writing article sample 1" loading="lazy">
+          <img src="images/culture_writing_2.png" alt="Culture writing article sample 2" loading="lazy">
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Contact</h2>
+    <p>Primary email: <a href="mailto:ahbague@up.edu.ph">ahbague@up.edu.ph</a></p>
+    <p>Facebook: AJ Bague</p>
+  </footer>
+</body>
+</html>
